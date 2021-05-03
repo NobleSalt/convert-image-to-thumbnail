@@ -5,7 +5,7 @@
 1. run **git clone https://github.com/NobleSalt/convert-image-to-thumbnail.git**
 2. **cd convert-image-to-thumbnail/**
 3. run **python -m venv env**
-4. run **env/Scripts/activate** *windows* || **source env/bin/activate** *linux*
+4. run **env/Scripts/activate.bat** *windows* || **source env/bin/activate** *linux*
 5. run **pip install -r requirements.txt**
 6. run **python manage.py migrate**
 7. run **python manage.py makemigrations toThumb**
