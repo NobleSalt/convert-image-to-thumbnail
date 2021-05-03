@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+<!-- Static Tag -->
+{% load static %}
+<!-- /Static Tag -->
+
+<!-- Title -->
+{% block title %}
+<title>File Upload</title>
+{% endblock %}
+<!-- /Title -->
+
+<!-- Body -->
+{% block body%}
+<form
+  enctype="multipart/form-data"
+  action="{% url 'thumb:nail' %}"
+  method="post"
+>
+  <div class="title">{{title}}</div>
+  {% csrf_token %}
+  <br />
+  <input type="text" name="name" placeholder="Enter your Image name" />
+  <br />
+  <div onclick="clickFile()" class="upload">Upload File</div>
+  <br />
+  <input type="file" id="file" name="image" hidden />
+  <!-- <br /> -->
+  <input type="submit" value="Submit" />
+</form>
+{% endblock body %}
+<!-- /Body -->
+
+<!-- Style -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'file.css' %}" />
+{% endblock %}
+<!-- /Style -->
+
+<!-- Script -->
+{% block script %}
+<script>
+  const file = document.getElementById('file');
+
+  const clickFile = () => {
+    file.click();
+  };
+</script>
+{% endblock %}
+<!-- /Script -->

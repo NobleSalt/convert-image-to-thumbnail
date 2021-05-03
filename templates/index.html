@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!-- Static Tag -->
+{% load static %}
+<!-- /Static Tag -->
+
+<!-- Title -->
+{% block title %}
+<title>Home</title>
+{% endblock %}
+<!-- /Title -->
+
+<!-- Body -->
+{% block body%}
+<!-- <a href="{% url 'thumb:nail' %}">Click here to go to Convert to thumbnail </a> -->
+<div>
+  {% for image in images %}
+  <div>
+    <br />
+    <h4>{{image.name}}</h4>
+    <img src="{{image.image_thumbnail.url}}" alt="image.name" />
+  </div>
+  {% endfor %}
+</div>
+{% endblock body %}
+<!-- /Body -->
+
+<!-- Style -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'index.css' %}" />
+{% endblock %}
+<!-- /Style -->

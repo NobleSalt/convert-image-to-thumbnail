@@ -1,0 +1,7 @@
+form.html
+chunk.py
+__pycache__
+db.sqlite3
+migrations
+env
+allmedia

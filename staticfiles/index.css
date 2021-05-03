@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body > div > div > img {
+  border-radius: 5px;
+  box-shadow: 1px 1px 30px -7px grey;
+}
+
+body > div > :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 700px) {
+  body > div > :not(:first-child) {
+    margin-left: 1rem;
+  }
+}
