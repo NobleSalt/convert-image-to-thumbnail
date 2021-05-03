@@ -11,4 +11,4 @@
 7. run **python manage.py makemigrations toThumb**
 8. run **python manage.py migrate toThumb**
 9. run **python manage.py createsuperuser** *and follow the prompt*
-10. finally, run **python manage.py runserver**
+10. finally, run **python manage.py runserver** *and go to localhost:8000*
